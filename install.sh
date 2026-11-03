@@ -4,6 +4,7 @@
 # Layout:
 #   home/  -> $HOME
 #   dwm/   -> $HOME/src/dwm
+#   dmenu/ -> $HOME/src/dmenu
 #
 # Existing regular files are never overwritten; move them into the repo
 # yourself first (that is the "adopt" step). Existing symlinks are replaced.
@@ -52,5 +53,6 @@ link_package() {
 
 link_package home "$HOME"
 link_package dwm "$HOME/src/dwm"
+link_package dmenu "$HOME/src/dmenu"
 
 echo "done."

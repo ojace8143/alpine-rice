@@ -5,8 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=10" };
 static const char col_bg[]         = "#080D18";  /* Midnight   — bar background */
 static const char col_text[]       = "#8298B8";  /* Mist       — normal text */
 static const char col_bright[]     = "#E6F1FF";  /* Snow       — selected text */
@@ -59,12 +58,25 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[8]; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_text, "-sb", col_accent, "-sf", col_bright, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
+static const char *termcmd[]    = { "alacritty", NULL };
+static const char *ffcmd[]      = { "firefox", NULL };
+static const char *btopcmd[]    = { "alacritty", "-e", "btop", NULL };
+static const char *cmuscmd[]    = { "alacritty", "-e", "cmus", NULL };
+static const char *ttypercmd[]  = { "alacritty", "-e", "ttyper", NULL };
+static const char *discordcmd[] = { "flatpak", "run", "com.discordapp.Discord", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = ffcmd } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = btopcmd } },
+	{ MODKEY,                       XK_F4,     spawn,          {.v = cmuscmd } },
+	{ MODKEY,                       XK_F5,     spawn,          {.v = ttypercmd } },
+	{ MODKEY,                       XK_F6,     spawn,          {.v = discordcmd } },
+	{ MODKEY,                       XK_F7,     spawn,          SHCMD("feh -Z -D 3 \"$HOME/Pictures\"") },
+	{ 0,                            XK_Print,  spawn,          SHCMD("mkdir -p \"$HOME/Pictures/screenshots\" && scrot -q 90 \"$HOME/Pictures/screenshots/%Y-%m-%d_%H%M%S.png\"") },
+	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("mkdir -p \"$HOME/Pictures/screenshots\" && scrot -s -q 90 \"$HOME/Pictures/screenshots/%Y-%m-%d_%H%M%S.png\"") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_q,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
