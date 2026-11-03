@@ -1,0 +1,51 @@
+# ~/.colors — "midnight" palette
+# Single source of truth for the desktop/terminal color scheme.
+# Accent: Ice Blue (#4C78A8). Cool navy base with a few functional accents.
+#
+#  HEX  = #RRGGBB (opaque)
+#  RGBA = rgba(r,g,b,a) equivalent
+
+# ───────────────────────────── base ─────────────────────────────
+VD_BG          #080D18     rgba(8,13,24,1.00)       # Midnight — terminal background
+VD_BG_MAIN     #101A2B     rgba(16,26,43,1.00)      # Deep Navy — main background
+VD_BG_SECOND   #17263D     rgba(23,38,61,1.00)      # Slate Navy — secondary
+VD_SURFACE     #203653     rgba(32,54,83,1.00)      # Steel Blue — surface / selection
+VD_MUTED       #315477     rgba(49,84,119,1.00)     # Glacier — muted accent
+VD_ACCENT      #4C78A8     rgba(76,120,168,1.00)    # Ice Blue — primary accent
+VD_HIGHLIGHT   #78A9DB     rgba(120,169,219,1.00)   # Frost — highlight
+VD_FG          #E6F1FF     rgba(230,241,255,1.00)   # Snow — main text
+VD_FG_MUTED    #8298B8     rgba(130,152,184,1.00)   # Mist — secondary text
+VD_FG_BRIGHT   #B5D8F5     rgba(181,216,245,1.00)   # Ice White — bright text
+
+# ─────────────────────────── accents ───────────────────────────
+VD_RED         #E06C75     rgba(224,108,117,1.00)   # error
+VD_GREEN       #72C7A0     rgba(114,199,160,1.00)   # success / executable
+VD_YELLOW      #E9C46A     rgba(233,196,106,1.00)   # warning / archives
+VD_BLUE        #4C78A8     rgba(76,120,168,1.00)    # info / primary
+VD_MAGENTA     #A78BFA     rgba(167,139,250,1.00)   # images / special
+VD_CYAN        #63C5DA     rgba(99,197,218,1.00)    # links / media
+VD_RED_BR      #FF8490     rgba(255,132,144,1.00)
+VD_GREEN_BR    #91E0B8     rgba(145,224,184,1.00)
+VD_YELLOW_BR   #F5D58A     rgba(245,213,138,1.00)
+VD_BLUE_BR     #78A9DB     rgba(120,169,219,1.00)
+VD_MAGENTA_BR  #C4A7FF     rgba(196,167,255,1.00)
+VD_CYAN_BR     #8AE0ED     rgba(138,224,237,1.00)
+VD_CURSOR      #78A9DB     rgba(120,169,219,1.00)
+
+# ───────────────────────── ANSI (0–15) ─────────────────────────
+ANSI_BLACK     #101A2B
+ANSI_RED       #E06C75
+ANSI_GREEN     #72C7A0
+ANSI_YELLOW    #E9C46A
+ANSI_BLUE      #4C78A8
+ANSI_MAGENTA   #A78BFA
+ANSI_CYAN      #63C5DA
+ANSI_WHITE     #B5D8F5
+ANSI_BBLACK    #526A89
+ANSI_BRED      #FF8490
+ANSI_BGREEN    #91E0B8
+ANSI_BYELLOW   #F5D58A
+ANSI_BBLUE     #78A9DB
+ANSI_BMAGENTA  #C4A7FF
+ANSI_BCYAN     #8AE0ED
+ANSI_BWHITE    #E6F1FF

@@ -1,0 +1,53 @@
+# ~/.config/alacritty/alacritty.toml
+# https://alacritty.org/config-alacritty.html
+
+[font]
+size = 6
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+[colors.primary]
+background = "#080D18"
+foreground = "#E6F1FF"
+
+[colors.cursor]
+cursor = "#78A9DB"
+text = "#080D18"
+
+[colors.selection]
+background = "#203653"
+text = "#E6F1FF"
+
+[colors.normal]
+black = "#101A2B"
+red = "#E06C75"
+green = "#72C7A0"
+yellow = "#E9C46A"
+blue = "#4C78A8"
+magenta = "#A78BFA"
+cyan = "#63C5DA"
+white = "#B5D8F5"
+
+[colors.bright]
+black = "#526A89"
+red = "#FF8490"
+green = "#91E0B8"
+yellow = "#F5D58A"
+blue = "#78A9DB"
+magenta = "#C4A7FF"
+cyan = "#8AE0ED"
+white = "#E6F1FF"
